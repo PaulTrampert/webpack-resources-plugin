@@ -18,8 +18,5 @@
     "jasmine-reporters": "^2.2.1",
     "path": "^0.12.7",
     "webpack": "^2.6.1"
-  },
-  "dependencies": {
-    "fs": "^0.0.1-security"
   }
 }
