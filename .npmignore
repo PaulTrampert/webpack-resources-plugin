@@ -1,0 +1,5 @@
+node_modules/
+WebpackResources.json
+testResults/
+Jenkinsfile
+spec/
