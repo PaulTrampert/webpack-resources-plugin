@@ -3,3 +3,4 @@ WebpackResources.json
 testResults/
 Jenkinsfile
 spec/
+yarn.lock
