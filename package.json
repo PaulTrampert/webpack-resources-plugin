@@ -1,0 +1,22 @@
+{
+  "name": "webpack-dotnet-resources-plugin",
+  "version": "0.1.0",
+  "description": "Webpack plugin that outputs a json file of npm resources mapped to their public path and chunk hash.",
+  "main": "webpack-dotnet-resources-plugin.js",
+  "repository": "https://github.com/PTrampert/PTrampert.Webpack.CacheBuster.git",
+  "author": "Paul Trampert",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "test": "jasmine"
+  },
+  "devDependencies": {
+    "jasmine": "^2.6.0",
+    "jasmine-reporters": "^2.2.1",
+    "path": "^0.12.7",
+    "webpack": "^2.6.1"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}

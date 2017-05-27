@@ -1,0 +1,94 @@
+{
+    "errors": [],
+    "warnings": [],
+    "version": "2.6.1",
+    "hash": "0171bd75efdf535ece06",
+    "time": 58,
+    "publicPath": "/dist/",
+    "assetsByChunkName": {
+        "main": "index.js"
+    },
+    "assets": [
+        {
+            "name": "index.js",
+            "size": 2662,
+            "chunks": [
+                0
+            ],
+            "chunkNames": [
+                "main"
+            ],
+            "emitted": true
+        }
+    ],
+    "entrypoints": {
+        "main": {
+            "chunks": [
+                0
+            ],
+            "assets": [
+                "index.js"
+            ]
+        }
+    },
+    "chunks": [
+        {
+            "id": 0,
+            "rendered": true,
+            "initial": true,
+            "entry": true,
+            "extraAsync": false,
+            "size": 27,
+            "names": [
+                "main"
+            ],
+            "files": [
+                "index.js"
+            ],
+            "hash": "5b9d7015457dd508bd4e",
+            "parents": [],
+            "origins": [
+                {
+                    "moduleId": 0,
+                    "module": "C:\\Projects\\PTrampert.Webpack.CacheBuster\\webpack-dotnet-resources-plugin\\fake.js",
+                    "moduleIdentifier": "C:\\Projects\\PTrampert.Webpack.CacheBuster\\webpack-dotnet-resources-plugin\\fake.js",
+                    "moduleName": "./fake.js",
+                    "loc": "",
+                    "name": "main",
+                    "reasons": []
+                }
+            ]
+        }
+    ],
+    "modules": [
+        {
+            "id": 0,
+            "identifier": "C:\\Projects\\PTrampert.Webpack.CacheBuster\\webpack-dotnet-resources-plugin\\fake.js",
+            "name": "./fake.js",
+            "index": 0,
+            "index2": 0,
+            "size": 27,
+            "cacheable": true,
+            "built": true,
+            "optional": false,
+            "prefetched": false,
+            "chunks": [
+                0
+            ],
+            "assets": [],
+            "issuer": null,
+            "issuerId": null,
+            "issuerName": null,
+            "failed": false,
+            "errors": 0,
+            "warnings": 0,
+            "reasons": [],
+            "usedExports": true,
+            "providedExports": null,
+            "depth": 0,
+            "source": "console.log('Hello World');"
+        }
+    ],
+    "filteredModules": 0,
+    "children": []
+}
