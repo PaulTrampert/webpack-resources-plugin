@@ -13,6 +13,10 @@ pipeline {
                 sh "npm test"
             }
         }
-
+    }
+    post {
+        always {
+            junit 'testResults/*.xml'
+        }
     }
 }
