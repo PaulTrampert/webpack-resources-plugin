@@ -60,9 +60,9 @@ describe('webpack-resources-plugin', function() {
         it('outputs the mapping of resources to publicPaths and hashes', function() {
             subject.exportResources(stats);
             var result = require('../WebpackResources.json');
-            expect(result['index.js']).toBeDefined();
-            expect(result['index.js'].fileName).toEqual('/dist/index.js');
-            expect(result['index.js'].hash).toEqual('5b9d7015457dd508bd4e');
+            expect(result.webpackResources['index.js']).toBeDefined();
+            expect(result.webpackResources['index.js'].fileName).toEqual('/dist/index.js');
+            expect(result.webpackResources['index.js'].hash).toEqual('5b9d7015457dd508bd4e');
         });
     });
 });

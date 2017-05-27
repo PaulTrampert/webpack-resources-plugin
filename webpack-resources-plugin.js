@@ -14,10 +14,12 @@ function WebpackResourcesPlugin(options) {
 WebpackResourcesPlugin.prototype.exportResources = function (stats) {
     const self = this;
     let expandedStats = stats.toJson();
-    let result = {};
+    let result = {
+        webpackResources: {}
+    };
     for(let chunk of expandedStats.chunks) {
         for(let file of chunk.files) {
-            result[file] = {
+            result.webpackResources[file] = {
                 fileName: expandedStats.publicPath + file,
                 hash: chunk.hash
             }
