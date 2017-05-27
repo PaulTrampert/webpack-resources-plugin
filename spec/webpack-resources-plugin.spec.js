@@ -1,4 +1,4 @@
-var DotnetResourcesPlugin = require('../webpack-resources-plugin.js');
+var WebpackResourcesPlugin = require('../webpack-resources-plugin.js');
 var sampleStats = require('./sampleStats.json');
 var reporters = require('jasmine-reporters');
 var junitReporter = new reporters.JUnitXmlReporter({
@@ -21,29 +21,29 @@ describe('webpack-resources-plugin', function() {
 
     describe('Constructor', function () {
         it('sets fileName correctly when options are provided.', function () {
-            subject = new DotnetResourcesPlugin({fileName: './somefile.json'});
+            subject = new WebpackResourcesPlugin({fileName: './somefile.json'});
             expect(subject.fileName).toEqual('./somefile.json');
         });
 
         it('sets fileName correctly when empty options are provided', function () {
-            subject = new DotnetResourcesPlugin({});
+            subject = new WebpackResourcesPlugin({});
             expect(subject.fileName).toEqual('./WebpackResources.json');
         });
 
         it('sets fileName correctly when no options are provided', function () {
-            subject = new DotnetResourcesPlugin();
+            subject = new WebpackResourcesPlugin();
             expect(subject.fileName).toEqual('./WebpackResources.json');
         });
 
         it('creates a function called exportResources', function() {
-            subject = new DotnetResourcesPlugin();
+            subject = new WebpackResourcesPlugin();
             expect(subject.exportResources).toEqual(jasmine.any(Function));
         });
     });
 
     describe('apply', function() {
         beforeEach(function () {
-            subject = new DotnetResourcesPlugin();
+            subject = new WebpackResourcesPlugin();
         });
 
         it('plugs into the compilers "done" event', function () {
@@ -54,7 +54,7 @@ describe('webpack-resources-plugin', function() {
 
     describe('exportStats', function () {
         beforeEach(function () {
-            subject = new DotnetResourcesPlugin();
+            subject = new WebpackResourcesPlugin();
         });
 
         it('outputs the mapping of resources to publicPaths and hashes', function() {

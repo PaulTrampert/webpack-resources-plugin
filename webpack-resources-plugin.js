@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-function DotnetResourcesPlugin(options) {
+function WebpackResourcesPlugin(options) {
     const defaultFileName = './WebpackResources.json';
     const self = this;
     if (options) {
@@ -11,7 +11,7 @@ function DotnetResourcesPlugin(options) {
     }
 };
 
-DotnetResourcesPlugin.prototype.exportResources = function (stats) {
+WebpackResourcesPlugin.prototype.exportResources = function (stats) {
     const self = this;
     let expandedStats = stats.toJson();
     let result = {};
@@ -26,11 +26,11 @@ DotnetResourcesPlugin.prototype.exportResources = function (stats) {
     fs.writeFileSync(self.fileName, JSON.stringify(result));
 }
 
-DotnetResourcesPlugin.prototype.apply = function(compiler) {
+WebpackResourcesPlugin.prototype.apply = function(compiler) {
     const self = this;
     compiler.plugin('done', function(stats) {
         self.exportResources(stats);
     });
 }
 
-module.exports = DotnetResourcesPlugin;
+module.exports = WebpackResourcesPlugin;
