@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage ("Restore packages") {
             steps {
-                sh "yarn"
+                sh "npm install"
             }
         }
 
