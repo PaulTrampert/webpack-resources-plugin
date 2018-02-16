@@ -5,7 +5,7 @@
   "main": "webpack-resources-plugin.js",
   "repository": {
     "type":"git",
-    "url": "https://github.com/PTrampert/webpack-resources-plugin"
+    "url": "https://github.com/PaulTrampert/webpack-resources-plugin"
   },
   "author": "Paul Trampert",
   "license": "MIT",
