@@ -4,8 +4,8 @@
   "description": "Webpack plugin that outputs a json file of npm resources mapped to their public path and chunk hash.",
   "main": "webpack-resources-plugin.js",
   "repository": {
-    "type":"git",
-    "url": "https://github.com/PTrampert/webpack-resources-plugin"
+    "type": "git",
+    "url": "https://github.com/PaulTrampert/webpack-resources-plugin"
   },
   "author": "Paul Trampert",
   "license": "MIT",
