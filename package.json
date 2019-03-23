@@ -14,9 +14,8 @@
     "test": "jasmine"
   },
   "devDependencies": {
-    "jasmine": "^2.6.0",
-    "jasmine-reporters": "^2.2.1",
-    "path": "^0.12.7",
-    "webpack": "^2.6.1"
+    "jasmine": "^3.3.1",
+    "jasmine-reporters": "^2.3.2",
+    "path": "^0.12.7"
   }
 }
