@@ -16,7 +16,13 @@ describe('webpack-resources-plugin', function() {
         stats = jasmine.createSpyObj('stats', ['toJson']);
         stats.toJson.and.returnValue(sampleStats);
 
-        compiler = jasmine.createSpyObj('compiler', ['plugin']);
+        compiler = {
+            hooks: {
+                done: {
+                    tap: jasmine.createSpy('tap')
+                }
+            }
+        };
     });
 
     describe('Constructor', function () {
@@ -48,7 +54,7 @@ describe('webpack-resources-plugin', function() {
 
         it('plugs into the compilers "done" event', function () {
             subject.apply(compiler);
-            expect(compiler.plugin).toHaveBeenCalledWith('done', jasmine.any(Function));
+            expect(compiler.hooks.done.tap).toHaveBeenCalledWith('WebpackResourcesPlugin', jasmine.any(Function));
         });
     });
 
