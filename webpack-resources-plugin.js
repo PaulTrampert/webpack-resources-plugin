@@ -3,20 +3,18 @@ var fs = require('fs');
 class WebpackResourcesPlugin {
     constructor(options) {
         const defaultFileName = './WebpackResources.json';
-        const self = this;
         if (options) {
-            self.fileName = options.fileName || defaultFileName;
+            this.fileName = options.fileName || defaultFileName;
         }
         else {
-            self.fileName = defaultFileName;
+            this.fileName = defaultFileName;
         }
 
-        self.exportResources.bind(self);
-        self.apply.bind(self);
+        this.exportResources = this.exportResources.bind(this);
+        this.apply = this.apply.bind(this);
     };
 
     exportResources(stats) {
-        const self = this;
         let expandedStats = stats.toJson();
         let result = {
             webpackResources: {}
@@ -29,12 +27,11 @@ class WebpackResourcesPlugin {
                 }
             }
         }
-        fs.writeFileSync(self.fileName, JSON.stringify(result));
+        fs.writeFileSync(this.fileName, JSON.stringify(result));
     }
 
     apply(compiler) {
-        const self = this;
-        compiler.hooks.done.tap('WebpackResourcesPlugin', self.exportResources);
+        compiler.hooks.done.tap('WebpackResourcesPlugin', this.exportResources);
     }
 }
 module.exports = WebpackResourcesPlugin;
