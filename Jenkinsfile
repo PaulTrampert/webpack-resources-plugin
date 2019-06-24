@@ -1,3 +1,4 @@
+@Library('github-release-helpers@v0.2.1')
 def releaseInfo
 
 pipeline {
