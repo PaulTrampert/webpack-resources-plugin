@@ -4,3 +4,4 @@ testResults/
 Jenkinsfile
 spec/
 yarn.lock
+.npmrc
