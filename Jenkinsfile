@@ -2,7 +2,7 @@ def releaseInfo
 
 pipeline {
     agent {
-        docker 'nodejs:lts'
+        docker 'node:lts-stretch'
     }
 
     options {
